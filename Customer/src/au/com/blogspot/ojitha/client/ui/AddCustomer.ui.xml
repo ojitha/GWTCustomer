@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:o="urn:import:au.com.blogspot.ojitha.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel width="397px" height="281px">
+			<g:HorizontalPanel>
+				<g:Label text="First Name"/>
+				<g:TextBox ui:field="firstName"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Label text="Last Name"/>
+				<g:TextBox ui:field="lastName"/>
+			</g:HorizontalPanel>
+			<g:TabPanel width="323px">
+				<g:Tab text="Home">
+					<g:VerticalPanel width="5cm" height="3cm">
+						<g:HorizontalPanel>
+							<g:SimpleCheckBox ui:field="blnHomeAddress"/>
+							<g:Label text="Home Address"/>
+						</g:HorizontalPanel>
+						<o:AddressUI ui:field="homeAddressUi"/>
+					</g:VerticalPanel>
+				</g:Tab>
+				<g:Tab text="Work">
+					<g:VerticalPanel width="5cm" height="3cm">
+						<g:HorizontalPanel>
+							<g:SimpleCheckBox ui:field="blnWorkAddress"/>
+							<g:Label text="Working Address"/>
+						</g:HorizontalPanel>
+						<o:AddressUI ui:field="workAddressUi"/>
+					</g:VerticalPanel>
+				</g:Tab>
+			</g:TabPanel>
+		</g:VerticalPanel>
+		<g:Button ui:field="btnAdd" text="Submit"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 

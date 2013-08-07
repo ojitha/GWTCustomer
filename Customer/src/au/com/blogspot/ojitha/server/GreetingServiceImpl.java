@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.blogspot.ojitha.client.GreetingService;
 import au.com.blogspot.ojitha.server.domain.State;
-import au.com.blogspot.ojitha.server.service.StateService;
+import au.com.blogspot.ojitha.server.service.StateBusinessService;
 import au.com.blogspot.ojitha.server.spring.GWTSpringAwareContext;
 
 /**
@@ -17,7 +17,7 @@ public class GreetingServiceImpl extends GWTSpringAwareContext implements
 		GreetingService {
 
 	@Autowired
-	StateService stateSerivce;
+	StateBusinessService stateSerivce;
 	
 	public String greetServer(String input) throws IllegalArgumentException {
 		

@@ -10,6 +10,14 @@
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/customer/greet</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+ 	<servlet-name>customerService</servlet-name>
+    <url-pattern>/customer/customerService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+ 	<servlet-name>stateService</servlet-name>
+    <url-pattern>/customer/stateService</url-pattern>
+  </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
@@ -38,5 +46,13 @@
   <servlet>
     <servlet-name>greetServlet</servlet-name>
     <servlet-class>au.com.blogspot.ojitha.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>customerService</servlet-name>
+  	<servlet-class>au.com.blogspot.ojitha.server.CustomerServiceImpl</servlet-class>
+  </servlet>
+    <servlet>
+  	<servlet-name>stateService</servlet-name>
+  	<servlet-class>au.com.blogspot.ojitha.server.StateServiceImpl</servlet-class>
   </servlet>
 </web-app>

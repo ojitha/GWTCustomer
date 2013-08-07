@@ -11,12 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import au.com.blogspot.ojitha.server.domain.State;
 import au.com.blogspot.ojitha.server.repository.StateRepository;
-import au.com.blogspot.ojitha.server.service.StateService;
+import au.com.blogspot.ojitha.server.service.StateBusinessService;
 
 @Service("stateService")
 @Transactional
 @Repository
-public class StateServiceImpl implements StateService {
+public class StateServiceImpl implements StateBusinessService {
 
 	@Autowired
 	StateRepository stateRepository;
