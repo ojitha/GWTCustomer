@@ -1,10 +1,6 @@
 package au.com.blogspot.ojitha.client.ui;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.collections.map.HashedMap;
 
 import au.com.blogspot.ojitha.client.StateService;
 import au.com.blogspot.ojitha.client.StateServiceAsync;
@@ -19,6 +15,12 @@ import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
+/**
+ * Composit component for the Address
+ * The associated XHTML UI is AddressUI.ui.xml
+ * @author Ojitha
+ *
+ */
 public class AddressUI extends Composite{
 
 	
@@ -37,14 +39,19 @@ public class AddressUI extends Composite{
 
 	}
 	
-	public void readAllStates(){
+	/*
+	 * Initialize the address with states 
+	 */
+	private void readAllStates(){
 		StateServiceAsync stateService = GWT.create(StateService.class);
 		if (cmbState.getItemCount() == 0){
 			stateService.getAllStates(new AsyncCallback<List<StateDto>>() {
 	
+				
 				@Override
 				public void onFailure(Throwable caught) {
-					
+					//FIXME need to fix this for exceptions
+					// exceptions are not considered in this POC
 				}
 	
 				@Override
@@ -58,6 +65,10 @@ public class AddressUI extends Composite{
 		}
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.google.gwt.user.client.ui.Widget#onLoad()
+	 */
 	@Override
 	protected void onLoad() {
 		// initialize with RPC call to get all States

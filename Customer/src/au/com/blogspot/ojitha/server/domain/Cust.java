@@ -14,6 +14,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+/**
+ * Customer Entity
+ * @author Ojitha
+ *
+ */
 @Entity
 @Table(name="CUSTOMER")
 public class Cust implements Serializable {

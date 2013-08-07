@@ -10,6 +10,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+/**
+ * Address Entity
+ * @author Ojitha
+ *
+ */
 @Entity
 @Table(name="ADDRESS")
 public class Address {

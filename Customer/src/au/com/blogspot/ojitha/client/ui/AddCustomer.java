@@ -16,12 +16,16 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.SimpleCheckBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
-import com.google.gwt.user.client.ui.SimpleCheckBox;
-import com.google.gwt.user.client.ui.TabPanel;
-import com.google.gwt.event.logical.shared.SelectionEvent;
 
+/**
+ * This is the UI clsss for the Add Customer page
+ * The relevant XHTML page is AddCustomer.ui.xml 
+ * @author Ojitha
+ *
+ */
 public class AddCustomer extends Composite  {
 
 	private final CustomerServiceAsync customerService = GWT.create(CustomerService.class);
@@ -44,7 +48,10 @@ public class AddCustomer extends Composite  {
 		
 	}
 	
-	
+	/**
+	 * On click on the submit this will call to the {@link CustomerService#addCustomer(CustomerDto)} to
+	 * save.
+	 **/
 	@UiHandler("btnAdd")
 	void onBtnAddClick(ClickEvent event) {
 		
@@ -61,7 +68,7 @@ public class AddCustomer extends Composite  {
 			//homeAddressDto.setSate(homeAddressUi.getCodeOfSelectedState(homeAddressUi.cmbState.getItemText(homeAddressUi.cmbState.getSelectedIndex())));
 			homeAddressDto.setSate(homeAddressUi.cmbState.getValue(homeAddressUi.cmbState.getSelectedIndex()));
 			
-			//TODO move to reference data table
+			//FIXME move to reference data table
 			homeAddressDto.setAddressType("Home");
 			
 			addresses.add(homeAddressDto);
@@ -74,7 +81,7 @@ public class AddCustomer extends Composite  {
 			//workAddressDto.setSate(workAddressUi.getCodeOfSelectedState(workAddressUi.cmbState.getValue(workAddressUi.cmbState.getSelectedIndex())));
 			workAddressDto.setSate(workAddressUi.cmbState.getValue(workAddressUi.cmbState.getSelectedIndex()));
 			
-			//TODO move to reference data table
+			//FIXME move to reference data table
 			workAddressDto.setAddressType("Work");
 			
 			addresses.add(workAddressDto);
@@ -87,13 +94,13 @@ public class AddCustomer extends Composite  {
 			
 			@Override
 			public void onSuccess(Boolean result) {
-				// TODO Auto-generated method stub
+				// FIXME This is success message after saving the customer. Need implement
 				
 			}
 			
 			@Override
 			public void onFailure(Throwable caught) {
-				// TODO Auto-generated method stub
+				// FIXME Exceptions are not implemented for this POC
 				
 			}
 		});

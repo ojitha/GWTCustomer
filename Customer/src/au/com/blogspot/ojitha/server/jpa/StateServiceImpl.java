@@ -13,6 +13,11 @@ import au.com.blogspot.ojitha.server.domain.State;
 import au.com.blogspot.ojitha.server.repository.StateRepository;
 import au.com.blogspot.ojitha.server.service.StateBusinessService;
 
+/**
+ * State Service for the customer
+ * @author Ojitha
+ *
+ */
 @Service("stateService")
 @Transactional
 @Repository
@@ -20,6 +25,7 @@ public class StateServiceImpl implements StateBusinessService {
 
 	@Autowired
 	StateRepository stateRepository;
+	
 	
 	@Override
 	public void save(State state) {
