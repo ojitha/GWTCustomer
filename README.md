@@ -74,7 +74,7 @@ Customer/
    jdbc.password=your_password
    ```
 
-3. The application uses Hibernate auto-DDL to create tables automatically
+3. Configure Hibernate auto-DDL by uncommenting the "hibernate.hbm2ddl.auto" property in app-context.xml to create tables automatically
 
 ## Installation & Setup
 
